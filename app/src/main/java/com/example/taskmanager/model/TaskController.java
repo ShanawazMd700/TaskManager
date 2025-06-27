@@ -10,11 +10,9 @@ public class TaskController {
         taskList = new ArrayList<>();
     }
 
-    public void addTask(String title) {
-        taskList.add(new Tasks(title, "")); // empty subtitle
+    public void addTask(String title, String subtitle, long timeInMillis) {
+        taskList.add(new Tasks(title, subtitle, timeInMillis));
     }
-
-
 
     public void removeTask(int index) {
         if (index >= 0 && index < taskList.size()) {

@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    tools:context=".MainActivity">
 
     <EditText
         android:id="@+id/taskInput"
@@ -11,15 +14,33 @@
         android:layout_height="wrap_content"
         android:hint="Enter task" />
 
+    <TextView
+        android:id="@+id/timeDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No time selected"
+        android:paddingTop="8dp"
+        android:textStyle="italic" />
+
+    <!-- NEW Set Time button goes here -->
+    <Button
+        android:id="@+id/setTimeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Set Reminder Time"
+        android:layout_marginTop="8dp" />
+
     <Button
         android:id="@+id/addButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add Task" />
+        android:text="Add Task with Reminder"
+        android:layout_marginTop="12dp" />
 
     <ListView
         android:id="@+id/taskList"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:layout_marginTop="16dp" />
 </LinearLayout>
